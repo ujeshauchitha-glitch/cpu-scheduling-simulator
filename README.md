@@ -1,4 +1,4 @@
-# Advanced CPU Scheduling Simulator (Python)
+# CPU Scheduling Simulator (Python)
 
 A comprehensive Python-based simulation of Central Processing Unit (CPU) scheduling algorithms designed to analyze process execution and system performance metrics.
 
