@@ -1,29 +1,25 @@
-# CPU Scheduling Simulator
+# Advanced CPU Scheduling Simulator (Python)
+
+A comprehensive Python-based simulation of Central Processing Unit (CPU) scheduling algorithms designed to analyze process execution and system performance metrics.
+
 ![Gantt Chart Output](image.png)
-A technical tool designed to model and analyze the performance of various Central Processing Unit (CPU) scheduling algorithms. This project provides a quantitative comparison of process management strategies used in modern operating systems.
 
-**Link to Live Project:** https://ujeshauchitha-glitch.github.io/cpu-scheduling-simulator/
+## Technical Implementation
 
-## Implementation Details
+This project implements fundamental Operating Systems concepts through a modular, Object-Oriented approach. It calculates critical metrics including Completion Time, Turnaround Time (TAT), and Waiting Time (WT).
 
-The simulator evaluates the efficiency of four primary scheduling disciplines. The core logic handles time-sequenced process arrival and execution states using a custom JavaScript engine.
+### Core Algorithms Supported
+* **First Come First Serve (FCFS):** A non-preemptive model executing processes in arrival order.
+* **Shortest Job First (SJF):** Optimized for minimal average waiting time by selecting the shortest burst duration.
+* **Priority Scheduling:** Execution based on numerical priority weights.
+* **Round Robin (RR):** A preemptive time-sharing implementation with a configurable time quantum.
 
-### Supported Algorithms
-* First-Come, First-Served (FCFS)
-* Shortest Job First (SJF)
-* Round Robin (RR)
-* Priority Scheduling
+## Engineering Highlights
+* [cite_start]**Data Architecture:** Utilizes Python `dataclasses` for robust process state management, tracking remaining time and arrival synchronization.
+* **Visualization:** Integrated with `matplotlib` to generate color-coded Gantt charts, providing a visual timeline of CPU activity.
+* [cite_start]**Preemptive Logic:** The Round Robin engine handles context switching by maintaining a dynamic ready queue and managing process re-insertion based on remaining burst cycles.
 
-## Technical Architecture
-
-### 1. Process State Management
-The system maintains a state for each process, tracking its Arrival Time (AT), Burst Time (BT), and Remaining Time. For preemptive algorithms like Round Robin, the engine manages the re-insertion of processes into the ready queue while maintaining data integrity of the remaining burst cycles.
-
-### 2. Analytical Calculations
-The engine calculates precise performance metrics:
-* Turnaround Time (TAT): Completion Time - Arrival Time
-* Waiting Time (WT): Turnaround Time - Burst Time
-* System Throughput: Calculation of average wait and turnaround times.
-
-### 3. Interface Design
-The front-end is constructed with vanilla HTML/CSS and direct DOM manipulation. This ensures performance during high-frequency calculation updates.
+## How to Run
+1. Install dependencies: `pip install -r requirements.txt`
+2. Run interactive mode: `python cpu_scheduler.py`
+3. Run automated demo: `python demo_scheduler.py`
