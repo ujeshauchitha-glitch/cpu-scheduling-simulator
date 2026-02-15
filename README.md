@@ -1,35 +1,29 @@
 # CPU Scheduling Simulator
 
-A Python simulator implementing core operating system scheduling algorithms with performance metrics and visual Gantt chart analysis.
+A technical tool designed to model and analyze the performance of various Central Processing Unit (CPU) scheduling algorithms. This project provides a quantitative comparison of process management strategies used in modern operating systems.
 
----
+**Link to Live Project:** https://ujeshauchitha-glitch.github.io/cpu-scheduling-simulator/
 
-## Features
-- FCFS Scheduling  
-- Shortest Job First (SJF)  
-- Priority Scheduling  
-- Round Robin with configurable quantum  
-- Waiting and turnaround time calculation  
-- Gantt chart visualization using matplotlib  
+## Implementation Details
 
----
+The simulator evaluates the efficiency of four primary scheduling disciplines. The core logic handles time-sequenced process arrival and execution states using a custom JavaScript engine.
 
-## System Design
-Each process is represented with arrival time, burst time, and priority.  
-The scheduler module applies different algorithms to the same process set and records execution order and timing metrics.  
+### Supported Algorithms
+* First-Come, First-Served (FCFS)
+* Shortest Job First (SJF)
+* Round Robin (RR)
+* Priority Scheduling
 
-Visualization logic generates Gantt charts to illustrate CPU execution patterns and algorithm behavior.
+## Technical Architecture
 
-The design separates scheduling logic, metrics computation, and visualization into independent components.
+### 1. Process State Management
+The system maintains a state for each process, tracking its Arrival Time (AT), Burst Time (BT), and Remaining Time. For preemptive algorithms like Round Robin, the engine manages the re-insertion of processes into the ready queue while maintaining data integrity of the remaining burst cycles.
 
----
+### 2. Analytical Calculations
+The engine calculates precise performance metrics:
+* Turnaround Time (TAT): Completion Time - Arrival Time
+* Waiting Time (WT): Turnaround Time - Burst Time
+* System Throughput: Calculation of average wait and turnaround times.
 
-## What I Learned
-This project helped me understand how operating systems manage CPU time, compare algorithms, and analyze performance tradeoffs between fairness and efficiency.
-
----
-
-## How to Run
-```bash
-pip install matplotlib
-python cpu_scheduler.py
+### 3. Interface Design
+The front-end is constructed with vanilla HTML/CSS and direct DOM manipulation. This ensures performance during high-frequency calculation updates.
