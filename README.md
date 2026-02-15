@@ -1,5 +1,5 @@
 # CPU Scheduling Simulator
-
+![Gantt Chart Output](image.png)
 A technical tool designed to model and analyze the performance of various Central Processing Unit (CPU) scheduling algorithms. This project provides a quantitative comparison of process management strategies used in modern operating systems.
 
 **Link to Live Project:** https://ujeshauchitha-glitch.github.io/cpu-scheduling-simulator/
