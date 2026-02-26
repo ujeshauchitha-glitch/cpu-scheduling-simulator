@@ -2,7 +2,6 @@
 CPU Scheduling Simulator
 A project simulating different CPU scheduling algorithms
 
-References: OS Concepts textbook, class lecture notes
 """
 
 import matplotlib.pyplot as plt
@@ -233,7 +232,7 @@ class CPUScheduler:
         fig, ax = plt.subplots(figsize=(14, 6))
         
         # color mapping for processes
-        # using Set3 colormap - looks cleaner than random colors
+        # using Set3 colormap - looks cleaner than random colors(smart ik)
         colors = plt.cm.Set3.colors
         proc_colors = {}
         
